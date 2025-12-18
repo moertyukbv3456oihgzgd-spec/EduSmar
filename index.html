@@ -2,33 +2,43 @@
 <html lang="ar">
 <head>
     <meta charset="UTF-8">
-    <title>EduSmart | منصة تعليمية</title>
+    <title>EduScroll | منصة تعليمية</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header>
-    <h1>EduSmart</h1>
+    <h1>EduScroll</h1>
     <nav>
         <a href="#home">الرئيسية</a>
-        <a href="#services">الخدمات</a>
+        <a href="#about">عن المنصة</a>
+        <a href="#courses">الكورسات</a>
         <a href="#prices">الأسعار</a>
-        <a href="#contact">تواصل</a>
+        <a href="#contact">التسجيل</a>
     </nav>
 </header>
 
-<section id="home" class="section">
+<section id="home" class="section hero">
     <h2>منصة تعليمية أونلاين</h2>
-    <p>تعلم من أفضل المدرسين من بيتك</p>
-    <button onclick="welcome()">ابدأ الآن</button>
+    <p>اتعلم من أي مكان وفي أي وقت</p>
+    <button onclick="scrollToSection('courses')">شوف الكورسات</button>
 </section>
 
-<section id="services" class="section">
-    <h2>خدماتنا</h2>
+<section id="about" class="section">
+    <h2>عن المنصة</h2>
+    <p>
+        EduScroll منصة تعليمية بتقدّم كورسات أونلاين
+        في البرمجة والعلوم بأسلوب بسيط وحديث.
+    </p>
+</section>
+
+<section id="courses" class="section">
+    <h2>الكورسات المتاحة</h2>
     <div class="cards">
-        <div class="card">كورس برمجة</div>
-        <div class="card">كورس رياضيات</div>
-        <div class="card">كورس فيزياء</div>
+        <div class="card">برمجه</div>
+        <div class="card">اداره اعمال</div>
+        <div class="card">رياضيات</div>
+        <div class="card">فيزياء</div>
     </div>
 </section>
 
@@ -36,21 +46,21 @@
     <h2>الأسعار</h2>
     <ul>
         <li>كورس واحد: 300 جنيه</li>
-        <li>كورسَين: 500 جنيه</li>
-        <li>كل الكورسات: 800 جنيه</li>
+        <li>3 كورسات: 700 جنيه</li>
+        <li>اشتراك كامل: 1000 جنيه</li>
     </ul>
 </section>
 
 <section id="contact" class="section">
-    <h2>تواصل معنا</h2>
-    <form onsubmit="return validateForm()">
-        <input type="text" id="name" placeholder="الاسم">
-        <input type="email" id="email" placeholder="البريد الإلكتروني">
-        <button type="submit">إرسال</button>
+    <h2>سجّل دلوقتي</h2>
+    <form onsubmit="return register()">
+        <input type="text" id="name" placeholder="اسمك">
+        <input type="email" id="email" placeholder="الإيميل">
+        <button type="submit">تسجيل</button>
     </form>
     <p id="result"></p>
 </section>
 
-<script src="js/script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
