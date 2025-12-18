@@ -1,66 +1,80 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <title>EduScroll | منصة تعليمية</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>أكاديمية التعلم الذكي | منصتك للمستقبل</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header>
-    <h1>EduScroll</h1>
-    <nav>
-        <a href="#home">الرئيسية</a>
-        <a href="#about">عن المنصة</a>
-        <a href="#courses">الكورسات</a>
-        <a href="#prices">الأسعار</a>
-        <a href="#contact">التسجيل</a>
-    </nav>
-</header>
+    <header>
+        <nav>
+            <div class="logo">Edu<span>Smart</span></div>
+            <ul class="nav-links">
+                <li><a href="#home">الرئيسية</a></li>
+                <li><a href="#courses">الكورسات</a></li>
+                <li><a href="#about">عن المنصة</a></li>
+                <li><a href="#contact">تواصل معنا</a></li>
+            </ul>
+        </nav>
+    </header>
 
-<section id="home" class="section hero">
-    <h2>منصة تعليمية أونلاين</h2>
-    <p>اتعلم من أي مكان وفي أي وقت</p>
-    <button onclick="scrollToSection('courses')">شوف الكورسات</button>
-</section>
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>تعلم مهارات جديدة <span class="highlight">أونلاين</span></h1>
+            <p>انضم لأكثر من 10,000 طالب وطالبة وابدأ رحلة نجاحك اليوم.</p>
+            <div class="hero-btns">
+                <button class="btn-primary" onclick="showWelcome()">تصفح الكورسات</button>
+                <button class="btn-secondary">سجل الآن</button>
+            </div>
+        </div>
+    </section>
 
-<section id="about" class="section">
-    <h2>عن المنصة</h2>
-    <p>
-        EduScroll منصة تعليمية بتقدّم كورسات أونلاين
-        في البرمجة والعلوم بأسلوب بسيط وحديث.
-    </p>
-</section>
+    <section id="courses" class="courses">
+        <h2>أحدث الكورسات المتاحة</h2>
+        <div class="courses-grid">
+            <div class="course-card">
+                <div class="course-img" style="background-image: url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=300&q=80')"></div>
+                <div class="course-info">
+                    <h3>برمجة الويب (Full Stack)</h3>
+                    <p>تعلم HTML, CSS, JS من الصفر للاحتراف.</p>
+                    <span class="price">500 ج.م</span>
+                    <button class="buy-btn">اشترك الآن</button>
+                </div>
+            </div>
+            <div class="course-card">
+                <div class="course-img" style="background-image: url('https://images.unsplash.com/photo-1557838923-2985c318be48?auto=format&fit=crop&w=300&q=80')"></div>
+                <div class="course-info">
+                    <h3>التسويق الإلكتروني</h3>
+                    <p>احترف إعلانات فيسبوك وجوجل وتحليل البيانات.</p>
+                    <span class="price">400 ج.م</span>
+                    <button class="buy-btn">اشترك الآن</button>
+                </div>
+            </div>
+            <div class="course-card">
+                <div class="course-img" style="background-image: url('https://images.unsplash.com/photo-1509228468518-180dd4864904?auto=format&fit=crop&w=300&q=80')"></div>
+                <div class="course-info">
+                    <h3>علوم البيانات</h3>
+                    <p>تحليل البيانات باستخدام لغة Python والذكاء الاصطناعي.</p>
+                    <span class="price">600 ج.م</span>
+                    <button class="buy-btn">اشترك الآن</button>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<section id="courses" class="section">
-    <h2>الكورسات المتاحة</h2>
-    <div class="cards">
-        <div class="card">برمجه</div>
-        <div class="card">اداره اعمال</div>
-        <div class="card">رياضيات</div>
-        <div class="card">فيزياء</div>
-    </div>
-</section>
+    <section class="stats">
+        <div class="stat-item"><h3>+50</h3><p>مدرب معتمد</p></div>
+        <div class="stat-item"><h3>+100</h3><p>كورس تدريبي</p></div>
+        <div class="stat-item"><h3>+10k</h3><p>طالب نشط</p></div>
+    </section>
 
-<section id="prices" class="section">
-    <h2>الأسعار</h2>
-    <ul>
-        <li>كورس واحد: 300 جنيه</li>
-        <li>3 كورسات: 700 جنيه</li>
-        <li>اشتراك كامل: 1000 جنيه</li>
-    </ul>
-</section>
+    <footer id="contact">
+        <p>تواصل معنا: info@edusmart.com</p>
+        <p>جميع الحقوق محفوظة &copy; 2024</p>
+    </footer>
 
-<section id="contact" class="section">
-    <h2>سجّل دلوقتي</h2>
-    <form onsubmit="return register()">
-        <input type="text" id="name" placeholder="اسمك">
-        <input type="email" id="email" placeholder="الإيميل">
-        <button type="submit">تسجيل</button>
-    </form>
-    <p id="result"></p>
-</section>
-
-<script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

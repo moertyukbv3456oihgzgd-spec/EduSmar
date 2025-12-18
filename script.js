@@ -1,21 +1,17 @@
-function scrollToSection(id){
-    document.getElementById(id).scrollIntoView({
-        behavior: "smooth"
+
+function showWelcome() {
+    window.scrollTo({
+        top: document.getElementById('courses').offsetTop - 70,
+        behavior: 'smooth'
     });
 }
 
-function register(){
-    let name=document.getElementById("name").value;
-    let email=document.getElementById("email").value;
-    let result=document.getElementById("result");
+// تفاعل أزرار الشراء
+const buyButtons = document.querySelectorAll('.buy-btn');
 
-    if(name==="" || email===""){
-        result.innerHTML="من فضلك املأ جميع البيانات";
-        result.style.color="red";
-        return false;
-    }
-
-    result.innerHTML="تم التسجيل بنجاح 🎉";
-    result.style.color="green";
-    return false;
-}
+buyButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        const courseName = button.parentElement.querySelector('h3').innerText;
+        alert(تمت إضافة كورس "${courseName}" إلى سلة مشترياتك!);
+    });
+});
