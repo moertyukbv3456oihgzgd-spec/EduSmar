@@ -1,71 +1,58 @@
-/* Reset بسيط */
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
-/* الجسم */
 body{
-    font-family: Arial, sans-serif;
-    direction: rtl;
+    margin:0;
+    font-family:Arial;
+    direction:rtl;
     background:#f4f4f4;
-    color:#333;
-    line-height:1.6;
 }
 
-/* الهيدر */
+/* Navbar */
 header{
-    background:#2c3e50;
-    color:#fff;
-    padding:15px;
+    position:fixed;
+    top:0;
+    width:100%;
+    background:#34495e;
+    color:white;
+    padding:12px;
     text-align:center;
 }
 
-/* اللينكات */
 nav a{
-    color:#fff;
+    color:white;
     margin:0 8px;
     text-decoration:none;
     font-weight:bold;
 }
 
-/* الأقسام */
-section{
-    background:#fff;
-    margin:15px;
-    padding:20px;
-    border-radius:8px;
+/* Sections */
+.section{
+    min-height:80vh;
+    padding:100px 20px 40px;
+    text-align:center;
 }
 
-/* العناوين */
-h1, h2{
-    margin-bottom:10px;
+.hero{
+    background:#6a11cb;
+    color:white;
 }
 
-/* الكروت أو العناصر */
+/* Cards */
+.cards{
+    display:flex;
+    justify-content:center;
+}
+
 .card{
-    background:#ecf0f1;
-    padding:15px;
-    margin:10px 0;
-    border-radius:6px;
+    background:white;
+    padding:20px;
+    margin:10px;
+    width:120px;
+    border-radius:10px;
 }
 
-/* الأزرار */
-button{
-    background:#3498db;
-    color:#fff;
-    border:none;
-    padding:8px 16px;
-    border-radius:5px;
-    cursor:pointer;
-}
-
-/* الفورم */
-input, select{
-    width:100%;
-    padding:8px;
-    margin:8px 0;
-    border:1px solid #ccc;
-    border-radius:5px;
+/* Form */
+form input{
+    display:block;
+    margin:10px auto;
+    padding:10px;
+    width:70%;
 }
